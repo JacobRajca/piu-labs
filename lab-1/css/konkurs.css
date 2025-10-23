@@ -1,0 +1,207 @@
+/* zmienne globalne */
+:root {
+  --bg-color: #f5f5f5;
+  --form-bg: #ffffff;
+  --text-color: #000;
+  --button-bg: #4caf50;
+  --button-hover: #45a049;
+  --border-color: #ccc;
+  --dark-theme: #333;
+  --dark-border: #555;
+  --dark-theme-text-color: #eee;
+  --dark-theme-button: #2e7d32;
+  --dark-theme-button-hover: #256428;
+}
+
+/* stylowanie Body */
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 2rem;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+/* ustawienie kontenera */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* stylowanie formularza */
+
+.form-header {
+  position: relative;
+  text-align: left;
+  width: 500px;
+  margin-bottom: 1rem;
+}
+
+.form-header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  transition: color 0.4s;
+}
+
+/* ikona przełącznika motywu */
+
+.form-header label[for='theme-toggle'] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  user-select: none;
+}
+
+.form-header label[for='theme-toggle']:hover {
+  transform: rotate(15deg);
+}
+
+/* formularz konkursu */
+
+.contest-form {
+  background: var(--form-bg);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 100%;
+  max-width: 500px;
+  transition: background-color 0.4s, color 0.4s, box-shadow 0.4s;
+}
+
+.contest-form label {
+  display: block;
+  margin-top: 0.8rem;
+  font-weight: 500;
+}
+
+.contest-form input,
+.contest-form select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border: 1px solid var(--border-color);
+  font-size: 16px;
+  transition: background-color 0.4s, color 0.4s, border-color 0.4s;
+}
+
+/* pole wybory koloru */
+
+.contest-form input[type='color'] {
+  height: 2.5rem;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Radio oraz fieldset */
+
+.publikacja {
+  border: 1px solid var(--border-color);
+  padding: 0.2rem 1rem 0.2rem 1rem;
+  text-align: left;
+  margin: 0;
+}
+
+.publikacja label {
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  cursor: pointer;
+}
+
+.publikacja legend {
+  padding: 0.5rem;
+}
+
+.publikacja input[type='radio'] {
+  margin: 0;
+  width: auto;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+/* zgoda na regulamin */
+
+.agree {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 16px;
+}
+
+.agree input[type='checkbox'] {
+  width: 1rem;
+  height: 1rem;
+  accent-color: var(--button-bg);
+  cursor: pointer;
+  margin-top: 1rem;
+  flex-shrink: 0;
+}
+
+.agree label {
+  cursor: pointer;
+  line-height: 0.3;
+}
+
+/* przycisk submit */
+
+button {
+  width: 100%;
+  background-color: var(--button-bg);
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  margin-top: 1rem;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+}
+
+/* ustawienia kursoru dla pól */
+
+input[type='checkbox'],
+input[type='radio'],
+input[type='color'],
+button,
+label[for='theme-toggle'] {
+  cursor: pointer;
+}
+
+/* Tryb ciemny */
+
+#theme-toggle:checked ~ .container .contest-form {
+  background-color: #1e1e1e;
+  color: #eee;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+#theme-toggle:checked ~ .container .contest-form input,
+#theme-toggle:checked ~ .container .contest-form select,
+#theme-toggle:checked ~ .container .contest-form fieldset {
+  background-color: var(--dark-theme);
+  border-color: var(--dark-border);
+  color: var(--dark-theme-text-color);
+}
+
+#theme-toggle:checked ~ .container .contest-form button {
+  background-color: var(--dark-theme-button);
+}
+
+#theme-toggle:checked ~ .container .contest-form button:hover {
+  background-color: var(--dark-theme-button-hover);
+}

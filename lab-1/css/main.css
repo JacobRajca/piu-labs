@@ -1,0 +1,130 @@
+/* Reset i podstawy */
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.login-container {
+  text-align: center;
+}
+
+h1,
+h2 {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 0 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #cceccc;
+}
+
+main,
+article {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  text-align: center;
+  margin: 2rem 0;
+  color: #666;
+}
+
+button,
+input[type='submit'] {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover,
+input[type='submit']:hover {
+  background-color: #45a049;
+}
+
+/* Formularz logowania */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 3rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form label {
+  font-weight: 500;
+}
+
+.login-form input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.login-form input:focus {
+  border-color: #4caf50;
+  outline: none;
+  box-shadow: 0 0 4px rgba(76, 175, 80, 0.5);
+}
+
+.login-form button {
+  margin-top: 1rem;
+  padding: 0.7rem;
+  font-weight: bold;
+}
+
+/* Responsywność */
+@media (max-width: 600px) {
+  main,
+  article,
+  .login-form {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    margin: 0.5rem 0;
+  }
+}
