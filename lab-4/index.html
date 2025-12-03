@@ -8,5 +8,32 @@
   <body>
     <h1>Lab 4</h1>
     <a href="..">Powrót</a>
+    <div id="board">
+      <div class="column" data-column="todo">
+        <h2>Do zrobienia (<span class="counter">0</span>)</h2>
+        <button class="add-card">Dodaj kartę</button>
+        <button class="color-column">Koloruj kolumnę</button>
+        <button class="sort">Sortuj</button>
+        <div class="cards"></div>
+      </div>
+
+      <div class="column" data-column="progress">
+        <h2>W trakcie (<span class="counter">0</span>)</h2>
+        <button class="add-card">Dodaj kartę</button>
+        <button class="color-column">Koloruj kolumnę</button>
+        <button class="sort">Sortuj</button>
+        <div class="cards"></div>
+      </div>
+
+      <div class="column" data-column="done">
+        <h2>Zrobione (<span class="counter">0</span>)</h2>
+        <button class="add-card">Dodaj kartę</button>
+        <button class="color-column">Koloruj kolumnę</button>
+        <button class="sort">Sortuj</button>
+        <div class="cards"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
