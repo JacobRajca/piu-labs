@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lab 5 – Kształty (store + Observer)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h2>Kształty – store + Obserwator</h2>
+
+      <section class="controls">
+        <button id="addSquare">Dodaj kwadrat</button>
+        <button id="addCircle">Dodaj kółko</button>
+        <button id="recolorSquares">Przekoloruj kwadraty</button>
+        <button id="recolorCircles">Przekoloruj kółka</button>
+      </section>
+
+      <section class="counters">
+        Kwadraty: <strong id="cntSquares">0</strong> &nbsp;|&nbsp; Kółka:
+        <strong id="cntCircles">0</strong>
+      </section>
+
+      <section class="board-wrapper">
+        <div id="board" aria-label="Pole z kształtami"></div>
+      </section>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
